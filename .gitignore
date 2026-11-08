@@ -1,0 +1,13 @@
+
+# Python environments and generated files
+.venv/
+ambiqt/
+__pycache__/
+.DS_Store
+
+# AmbiQT local database files
+ambiqt-reproduction/db-content/
+ambiqt-reproduction/db-content.zip
+
+# Never upload API credentials
+ambiqt-reproduction/src/chatgpt/credentials.py

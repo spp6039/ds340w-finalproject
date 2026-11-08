@@ -11,3 +11,6 @@ ambiqt-reproduction/db-content.zip
 
 # Never upload API credentials
 ambiqt-reproduction/src/chatgpt/credentials.py
+
+# Ignore untracked files in the copied AmbiQT repository
+/ambiqt-reproduction/**

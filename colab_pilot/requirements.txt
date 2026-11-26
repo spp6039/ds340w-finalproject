@@ -1,0 +1,5 @@
+# Python package requirements for the AmbiQT three-agent pilot.
+# Everything else used by the agents and scoring pipeline is Python standard library
+# (json, sqlite3, urllib, threading, dataclasses, re, hashlib, ...).
+# The classifier (interpret.py) needs sqlglot; pin the version the project was built on.
+sqlglot==30.31.0

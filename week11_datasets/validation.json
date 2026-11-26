@@ -1,0 +1,332 @@
+[
+  null,
+  {
+    "extra_map": {
+      "properties": {
+        "property_name": [
+          "name",
+          "title"
+        ]
+      }
+    },
+    "query2": "select title from properties where property_type_code = \"House\" union select title from properties where property_type_code = \"Apartment\" and room_count > 1",
+    "db_id": "real_estate_properties",
+    "schema_without_content": "ref_feature_types : feature_type_code , feature_type_name  | ref_property_types : property_type_code , property_type_description  | other_available_features : feature_type_code , feature_name , feature_id , feature_description  | properties : room_count , oth_feature_3 , property_id , vendor_requested_price , fld_feature_2 , shp_feature_3 , agreed_selling_price , hse_feature_2 , oth_feature_2 , buyer_offered_price , apt_feature_2 , date_sold , title , apt_feature_1 , hse_feature_3 , fld_feature_3 , oth_feature_1 , name , shp_feature_1 , other_property_details , property_address , property_type_code , date_on_market , hse_feature_1 , fld_feature_1 , apt_feature_3 , shp_feature_2  | other_property_features : feature_id , property_id , property_feature_description",
+    "query_toks_no_value": [
+      "select",
+      "property_name",
+      "from",
+      "properties",
+      "where",
+      "property_type_code",
+      "=",
+      "value",
+      "union",
+      "select",
+      "property_name",
+      "from",
+      "properties",
+      "where",
+      "property_type_code",
+      "=",
+      "value",
+      "and",
+      "room_count",
+      ">",
+      "value"
+    ],
+    "question_toks": [
+      "What",
+      "are",
+      "the",
+      "names",
+      "of",
+      "properties",
+      "that",
+      "are",
+      "either",
+      "houses",
+      "or",
+      "apartments",
+      "with",
+      "more",
+      "than",
+      "1",
+      "room",
+      "?"
+    ],
+    "orig_query": "select property_name from properties where property_type_code = \"House\" union select property_name from properties where property_type_code = \"Apartment\" and room_count > 1",
+    "question": "What are the names of properties that are either houses or apartments with more than 1 room?",
+    "query_toks": [
+      "SELECT",
+      "property_name",
+      "FROM",
+      "Properties",
+      "WHERE",
+      "property_type_code",
+      "=",
+      "``",
+      "House",
+      "''",
+      "UNION",
+      "SELECT",
+      "property_name",
+      "FROM",
+      "Properties",
+      "WHERE",
+      "property_type_code",
+      "=",
+      "``",
+      "Apartment",
+      "''",
+      "AND",
+      "room_count",
+      ">",
+      "1"
+    ],
+    "query1": "select name from properties where property_type_code = \"House\" union select name from properties where property_type_code = \"Apartment\" and room_count > 1",
+    "sql": {
+      "orderBy": [],
+      "from": {
+        "table_units": [
+          [
+            "table_unit",
+            3
+          ]
+        ],
+        "conds": []
+      },
+      "union": {
+        "orderBy": [],
+        "from": {
+          "table_units": [
+            [
+              "table_unit",
+              3
+            ]
+          ],
+          "conds": []
+        },
+        "union": null,
+        "except": null,
+        "groupBy": [],
+        "limit": null,
+        "intersect": null,
+        "where": [
+          [
+            false,
+            2,
+            [
+              0,
+              [
+                0,
+                10,
+                false
+              ],
+              null
+            ],
+            "\"Apartment\"",
+            null
+          ],
+          "and",
+          [
+            false,
+            3,
+            [
+              0,
+              [
+                0,
+                15,
+                false
+              ],
+              null
+            ],
+            1.0,
+            null
+          ]
+        ],
+        "having": [],
+        "select": [
+          false,
+          [
+            [
+              0,
+              [
+                0,
+                [
+                  0,
+                  13,
+                  false
+                ],
+                null
+              ]
+            ]
+          ]
+        ]
+      },
+      "except": null,
+      "groupBy": [],
+      "limit": null,
+      "intersect": null,
+      "where": [
+        [
+          false,
+          2,
+          [
+            0,
+            [
+              0,
+              10,
+              false
+            ],
+            null
+          ],
+          "\"House\"",
+          null
+        ]
+      ],
+      "having": [],
+      "select": [
+        false,
+        [
+          [
+            0,
+            [
+              0,
+              [
+                0,
+                13,
+                false
+              ],
+              null
+            ]
+          ]
+        ]
+      ]
+    },
+    "orig_example_idx": 1033,
+    "schema_with_content": "ref_feature_types : feature_type_code (\"Amenity\", \"Security\"), feature_type_name (\"Amenity, eg Pool.\", \"Securiyt, eg Burglar Alarm.\") | ref_property_types : property_type_code (\"House\", \"Apartment\", \"Shop\"), property_type_description (\"Shop, Retail Outlet.\", \"Field, Meadow.\", \"Apartment, Flat, Condo, etc.\") | other_available_features : feature_type_code (\"Amenity\", \"Security\"), feature_name (\"AirCon\", \"Pool\", \"BurglarAlarm\"), feature_id (2, 3, 4), feature_description (\"Air Conditioning.\", \"Swimming Pool.\", \"Burglar Alarm\") | properties : room_count (6, 3, 6), oth_feature_3 (None), property_id (2, 3, 13), vendor_requested_price (983.8596, 2198735.095, 6713620.9), fld_feature_2 (None), shp_feature_3 (None), agreed_selling_price (4201.8, 244353758.1824, 3344706.5755), hse_feature_2 (None), oth_feature_2 (None), buyer_offered_price (3520911.5258, 13991131.434, 2), apt_feature_2 (\"odio\", \"autem\", \"autem\"), date_sold (\"1997-11-07 20:22:05\", \"1979-05-13 16:58:06\", \"1979-05-13 16:58:06\"), title (\"wall street\", \"renoir\", \"renoir\"), apt_feature_1 (\"fuga\", \"et\", \"fuga\"), hse_feature_3 (None), fld_feature_3 (None), oth_feature_1 (None), name (\"wall street\", \"renoir\", \"renoir\"), shp_feature_1 (None), other_property_details (None), property_address (\"2088 Bashirian Fork Suite 337\nFaustinoport, MT 16771-9320\", \"743 Ephraim Greens\nAnniemouth, HI 47084-3853\", \"092 Paucek Highway Apt. 772\nEast Erika, IA 61358\"), property_type_code (\"Shop\", \"Other\", \"Apartment\"), date_on_market (\"1986-12-31 10:05:32\", \"1994-02-14 02:27:13\", \"1981-08-23 05:40:38\"), hse_feature_1 (None), fld_feature_1 (None), apt_feature_3 (None), shp_feature_2 (None) | other_property_features : feature_id (3, 4, 2), property_id (4, 7, 12), property_feature_description (\"odio\", \"ad\", \"et\")"
+  },
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null,
+  null
+]

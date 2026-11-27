@@ -69,7 +69,7 @@ def run(out_dir, timeout=10.0, error_threshold=0.20, skip_preflight=False,
 
     if not skip_preflight:
         print(f"preflight: Ollama readiness + model + smoke (num_predict={cfg.num_predict}) ...")
-        ok, detail = H.preflight(cfg, verbose=True)
+        ok, detail = H.preflight(cfg, smoke_timeout=180, verbose=True)  # 180s: covers T4 model warm-up
         if not ok:
             print("\n" + "=" * 70)
             print(f"ABORTING before any record: Ollama preflight FAILED (stage={detail.get('stage')}).")

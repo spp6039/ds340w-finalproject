@@ -1,5 +1,7 @@
 # AmbiQT Three-Agent Colab Pilot
 
+> **For the final demo / reproduction, follow the top-level [`README.md`](../README.md) and `DS340W_Demo.ipynb`.** This file documents the bundle internals. The upload-the-ZIP instructions below are from development and are no longer needed, because the notebook clones this repo directly. The paper uses `--num-predict 8192`.
+
 Runs **Agent A**, **Agent A2**, and **Agent B** on the **same 12 eligible AmbiQT
 validation records** using **Qwen3:4B** via local Ollama, and scores every
 candidate with the real Stage 2 pipeline. Self-contained: no network access to

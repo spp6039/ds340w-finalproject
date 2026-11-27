@@ -1,16 +1,17 @@
-
-# Python environments and generated files
+# Python / OS clutter
 .venv/
-ambiqt/
 __pycache__/
+*.pyc
 .DS_Store
+.ipynb_checkpoints/
 
-# AmbiQT local database files
-ambiqt-reproduction/db-content/
-ambiqt-reproduction/db-content.zip
+# Local outputs from re-running the pilot (committed paper results live in results/)
+/content/
+demo_results/
+
+# Large AmbiQT database dumps used by the archived baseline reproduction
+archive/ambiqt-reproduction/db-content/
+archive/ambiqt-reproduction/db-content.zip
 
 # Never upload API credentials
-ambiqt-reproduction/src/chatgpt/credentials.py
-
-# Ignore untracked files in the copied AmbiQT repository
-/ambiqt-reproduction/**
+**/credentials.py
